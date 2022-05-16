@@ -1,0 +1,93 @@
+  <!DOCTYPE html>
+<html>
+<head>
+	<style >
+		*,*::before,*::after{
+			box-sizing: border-box;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+			background:linear-gradient(to right,#00AAFF,#00FF6C);
+		 }
+		 .grid-container{
+		 	display: grid;
+		 	justify-content: center;
+		 	align-content: center;
+		 	min-height: 100vh;
+		 	grid-template-columns: repeat(4,100px);
+		 	grid-template-rows: minmax(120px,auto) repeat(5,100PX);
+		 	
+
+
+		 }
+		 .output{
+		 	
+          grid-column: 1 /-1;
+          background-color: rgba(0,0,0,.75);
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-around;
+          flex-direction: column;
+          word-wrap: break-word;
+          word-break: break-all;
+          padding: 10px;
+		 }
+		 button{
+          cursor: pointer;
+          outline: none;
+          background-color: : rgba(255,255,255,.75);
+          border: 1px solid white;
+          font-size: 2rem;
+
+
+		 }
+		 button:hover{
+		 	background-color: rgba(255,255,255,.9);
+		 }
+		 .all-clearButton{
+		 	grid-column: span 2;
+		 }
+		 .equalButton{
+		 	grid-column: span 2;
+		 }
+		 .previousOperand{
+		 	font-size: 1.5rem;
+		 	color: rgba(255,255,255,.75);
+		 }
+       .currentOperand{
+		 	font-size: 2.5rem;
+		 	color: white;
+		 }
+	</style>
+	<title>simple calculator</title>
+</head>
+<body>
+ <h1>simple calculator</h1>
+   <div class="grid-container">
+   	<div class="output">
+   	 <div class="previousOperand "></div>
+   	 <div class="currentOperand"></div>
+   	</div>
+   	<button  class="all-clearButton">AC</button>
+   	<button  class="deleteButton">DEL</button>
+   	<button  class ="operater">/</button>
+   	<button  class="number">1</button>
+   	<button  class="number">2</button>
+   	<button  class="number">3</button>
+   	<button  class="operater">*</button>
+   	<button  class ="number">4</button>
+    <button  class="number">5</button>
+    <button  class="number">6</button>
+    <button  class="operater">+</button>
+    <button  class="number">7</button>
+    <button  class="number">8</button>
+    <button  class="number">9</button>
+    <button  class="operater">-</button>
+    <button  class="number">.</button>
+    <button  class="number">0</button>
+    <button  class="equalButton" >=</button>
+   </div>
+   <script src="calcu.js"></script>
+</body>
+</html>
